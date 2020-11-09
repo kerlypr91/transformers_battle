@@ -36,6 +36,15 @@ export default function Rules () {
           </dt>
           <dt>&#8227; The team who eliminated the largest number of the opposing team is the winner</dt>
         </dl>
+        <h3>Special Rules:</h3>
+        <dl>
+          <dt>
+            &#8227; Any Transformer named Optimus Prime or Predaking wins his fight automatically regardless of any other criteria
+          </dt>
+          <dt>
+            &#8227; In the event, either of the above face each other, or a duplicate of each other, the game immediately ends with all competitors destroyed
+          </dt>
+        </dl>
       </div>
       <div className="rules__img">
         <img src={RulesBg} alt="rules" />
