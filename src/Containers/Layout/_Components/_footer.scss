@@ -1,0 +1,21 @@
+@import '../../../Variables.scss';
+
+.footer {
+  width: 100%;
+  background-color: black;
+  height: 60px;
+  position: absolute;
+  bottom: 0;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  color: $lightGreen;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+}
+
+@media (min-width: $minLandscapeRange) {
+  .footer {
+    border-bottom-right-radius: 0;
+  }
+}

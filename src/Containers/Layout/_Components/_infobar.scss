@@ -1,0 +1,74 @@
+@import '../../../Variables.scss';
+
+$avatar-size: 70px;
+
+%icon-container {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.infobar {
+  height: 100%;
+  width: 100px;
+  background-color: $darkBlue;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+
+  &__avatar-container {
+    height: $avatar-size;
+    width: $avatar-size;
+    margin: 35px 0 55px 0;
+    background-image: linear-gradient(to bottom right, navy, green, yellow);
+    border-radius: $avatar-size/2;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__avatar {
+      height: calc(#{$avatar-size} - 7px);
+      width: calc(#{$avatar-size} - 7px);
+      border-radius: 50%;
+      background-image: url('../../../Images/avatar.jpeg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75px;
+
+    &--facebook {
+      @extend %icon-container;
+      background-color: #3b5998;
+    }
+
+    &--twitter {
+      @extend %icon-container;
+      background-color: #00acee;
+    }
+
+    &--twitch {
+      @extend %icon-container;
+      background-color: #6441a5;
+    }
+  }
+}
+
+@media (min-width: $minLandscapeRange) {
+  .infobar {
+    display: flex;
+  }
+}

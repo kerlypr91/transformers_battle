@@ -1,0 +1,87 @@
+@import '../../Variables.scss';
+
+$border-color: white;
+
+.scale {
+  font-size: 20px;
+
+  &__options {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    height: 50px;
+
+    &__option {
+      flex: 1;
+      text-align: center;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      font-weight: bold;
+
+      box-sizing: content-box;
+
+      &:nth-child(even) {
+        border: 1px solid $border-color;
+      }
+
+      &:nth-child(odd) {
+        border-top: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+      }
+
+      &:last-child {
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-right: 1px solid $border-color;
+      }
+
+      &:first-child {
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-left: 1px solid $border-color;
+      }
+
+      &--selected {
+        background-color: $lighterGray;
+        color: $darkBlue;
+      }
+
+      &:hover {
+        background-color: white;
+        font-weight: 700;
+        color: $darkGreen;
+      }
+
+      &--blink {
+        @include createAnimation(blink 0.2s ease-in-out forwards);
+      }
+    }
+  }
+}
+
+@media (max-width: $maxSmallRange) {
+  .scale {
+    &__options {
+      font-size: 18px;
+    }
+  }
+}
+
+@include createKeyframes(blink) {
+  0% {
+    background-color: $darkGreen;
+  }
+  25% {
+    background-color: white;
+  }
+  50% {
+    background-color: $darkGreen;
+  }
+  100% {
+    background-color: white;
+  }
+}

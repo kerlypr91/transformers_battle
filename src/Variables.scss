@@ -1,0 +1,95 @@
+// Colors
+$lightBlue: #007cc7;
+$lightestBlue: #4da8da;
+$shadowOfDarkBlue: #203647;
+$shadowOfLightBlue: #eefbfb;
+$background: #005270;
+
+$darkGreen: #61892f;
+$lightGreen: #86c232;
+$darkBlue: #222629;
+$darkGray: #474b4f;
+$lightGray: #6b6e70;
+$lighterGray: #c3c5c5;
+$darkerBlue: #141618;
+$lighterGreen: #c2e098;
+
+// Measurements
+$maxSmallRange: 37.438em;
+$minPortraitRange: 37.5em;
+$minDesktopRange: 76.25em;
+$minLandscapeRange: 48.063em;
+
+// Typography
+
+%body-font {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+// Animations
+
+@mixin animate_all_properties {
+  @include createTransition(all 300ms ease);
+}
+
+@mixin createTransition($values...) {
+  -webkit-transition: $values;
+  -ms-transition: $values;
+  -moz-transition: $values;
+  -o-transition: $values;
+  transition: $values;
+}
+
+@mixin createKeyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @-o-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin createAnimation($values...) {
+  -webkit-animation: $values;
+  -ms-animation: $values;
+  -moz-animation: $values;
+  -o-animation: $values;
+  animation: $values;
+}
+
+@include createKeyframes(slideFromTop) {
+  0% {
+    transform: translate(-50%, -400%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@include createKeyframes(slideFromLeft) {
+  0% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@include createKeyframes(slideFromRight) {
+  0% {
+    transform: translateX(300%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,45 @@
+@import '../../Variables.scss';
+
+.layout {
+  margin: 30px;
+  flex: 1;
+  border-radius: 50px;
+  background-color: $darkBlue; // $content-background;
+  position: relative;
+  background-image: url('../../Images/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: luminosity;
+  display: flex;
+
+  &__left-side {
+    flex: 1;
+    position: relative;
+
+    &__content {
+      padding: 0;
+      margin-bottom: 120px;
+    }
+  }
+
+  &__right-side {
+    width: 0;
+  }
+}
+
+@media (min-width: $minLandscapeRange) {
+  .layout {
+    margin: 70px;
+
+    &__left-side {
+      &__content {
+        padding: 0 20px 0 100px;
+      }
+    }
+
+    &__right-side {
+      width: 100px;
+    }
+  }
+}

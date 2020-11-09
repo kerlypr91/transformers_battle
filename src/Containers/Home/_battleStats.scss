@@ -1,0 +1,213 @@
+@import '../../Variables.scss';
+
+%set_style {
+  border: 2px solid $lighterGreen;
+  border-radius: 15px;
+  padding: 15px;
+  height: 100%;
+}
+
+%legend-style {
+  padding: 0 30px;
+  color: white;
+  font-size: 18px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: $lighterGreen;
+}
+
+.battles-container {
+  display: flex;
+  width: 100%;
+  height: 350px;
+  margin-top: 90px;
+  position: relative;
+
+  &__autobots {
+    flex: 1;
+    opacity: 0.01;
+    margin-right: 0;
+
+    @include createAnimation(slideFromLeft 0.3s forwards);
+
+    &__set {
+      @extend %set_style;
+
+      &__legend {
+        @extend %legend-style;
+      }
+
+      &__list {
+        text-align: left;
+        padding: 10px;
+        margin: 0;
+        text-transform: uppercase;
+
+        > li {
+          margin-bottom: 15px;
+          margin-left: 50px;
+          font-weight: bolder;
+          font-size: 18px;
+          list-style: none;
+        }
+      }
+    }
+  }
+
+  &__decepticons {
+    flex: 1;
+    margin-left: 0;
+    transform: translateX(300%);
+    opacity: 0.01;
+
+    @include createAnimation(slideFromRight 0.3s 0.3s forwards);
+
+    &__set {
+      @extend %set_style;
+
+      &__legend {
+        @extend %legend-style;
+      }
+
+      &__list {
+        text-align: right;
+        padding: 10px;
+        margin: 0;
+        text-transform: uppercase;
+        width: 200px;
+
+        > li {
+          margin-bottom: 15px;
+          margin-right: 50px;
+          font-weight: bolder;
+          font-size: 18px;
+          list-style: none;
+        }
+      }
+    }
+  }
+
+  &__stats {
+    width: 400px;
+    max-height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 30px;
+    transform: translate(-50%, -400%);
+
+    @include createAnimation(slideFromTop 0.3s 0.6s forwards);
+
+    &__background {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: $darkerBlue;
+      opacity: 0.92;
+      border-radius: 25px;
+    }
+
+    &__content {
+      padding: 20px;
+      transform-style: preserve-3d;
+      text-align: center;
+      max-height: 500px;
+      overflow-y: auto;
+
+      &__title {
+        text-align: center;
+        font-weight: bolder;
+        font-size: 34px;
+        color: $lighterGreen;
+      }
+    }
+
+    .stats {
+      .stats-content {
+        margin-top: 30px;
+        text-align: center;
+
+        &__results {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 15px 0;
+          line-height: unset;
+          flex-wrap: wrap;
+
+          &__label {
+            font-size: 18px;
+            font-weight: 700;
+            margin-right: 20px;
+            white-space: nowrap;
+          }
+
+          &__value {
+            color: $lightGreen;
+            font-size: 34px;
+            line-height: 40px;
+            font-weight: bolder;
+          }
+        }
+
+        &__list {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          list-style: none;
+          height: 100%;
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 30px;
+          font-size: 18px;
+          color: $lighterGreen;
+
+          &__no-survivors {
+            color: $lighterGreen;
+            font-style: italic;
+          }
+        }
+      }
+
+      &__destroyed {
+        margin: 30px 0;
+      }
+
+      &__new-battle-button {
+        position: absolute;
+        color: white;
+        background: $darkGreen;
+        height: 50px;
+        border-radius: 15px;
+        padding: 0 30px;
+        border: none;
+        font-size: 18px;
+        font-weight: bolder;
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+        font-family: 'Didact Gothic' !important;
+      }
+    }
+  }
+}
+
+@media (min-width: $minDesktopRange) {
+  .battles-container {
+    &__autobots,
+    &__decepticons {
+      opacity: 1;
+    }
+
+    &__autobots {
+      margin-right: 100px;
+    }
+
+    &__decepticons {
+      margin-left: 100px;
+    }
+  }
+}

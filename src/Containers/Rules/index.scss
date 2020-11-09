@@ -1,0 +1,55 @@
+@import '../../Variables.scss';
+
+.rules {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  transform: translateX(400%);
+
+  @include createAnimation(slideFromLeft 0.6s forwards);
+
+  &__content {
+    background-color: $darkGreen;
+    margin: 0 0 40px 0;
+    padding: 30px;
+    border-radius: 35px;
+    color: white;
+    width: 100%;
+
+    > h3 {
+      font-size: 20px;
+      font-weight: bolder;
+    }
+
+    > dl {
+      > dt {
+        margin-bottom: 10px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__img {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+
+    > img {
+      width: 100%;
+      height: auto;
+      border-radius: 50px;
+    }
+  }
+}
+
+@media (min-width: $minDesktopRange) {
+  .rules {
+    flex-direction: row;
+
+    &__content {
+      width: 50%;
+      margin: 40px 40px 40px 0;
+    }
+  }
+}
