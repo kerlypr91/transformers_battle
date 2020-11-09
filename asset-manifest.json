@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/transformers_battle/static/css/main.8e0ecc44.chunk.css",
+    "main.js": "/transformers_battle/static/js/main.86cb93f7.chunk.js",
+    "main.js.map": "/transformers_battle/static/js/main.86cb93f7.chunk.js.map",
+    "runtime-main.js": "/transformers_battle/static/js/runtime-main.22a48146.js",
+    "runtime-main.js.map": "/transformers_battle/static/js/runtime-main.22a48146.js.map",
+    "static/js/2.e1b7cdb6.chunk.js": "/transformers_battle/static/js/2.e1b7cdb6.chunk.js",
+    "static/js/2.e1b7cdb6.chunk.js.map": "/transformers_battle/static/js/2.e1b7cdb6.chunk.js.map",
+    "static/js/3.cfbb69ec.chunk.js": "/transformers_battle/static/js/3.cfbb69ec.chunk.js",
+    "static/js/3.cfbb69ec.chunk.js.map": "/transformers_battle/static/js/3.cfbb69ec.chunk.js.map",
+    "index.html": "/transformers_battle/index.html",
+    "static/css/main.8e0ecc44.chunk.css.map": "/transformers_battle/static/css/main.8e0ecc44.chunk.css.map",
+    "static/js/2.e1b7cdb6.chunk.js.LICENSE.txt": "/transformers_battle/static/js/2.e1b7cdb6.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/transformers_battle/static/media/background.23d9edbe.jpg",
+    "static/media/opening_theme.7a74c5ea.mp3": "/transformers_battle/static/media/opening_theme.7a74c5ea.mp3",
+    "static/media/rules_bg.0498dd97.jpg": "/transformers_battle/static/media/rules_bg.0498dd97.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.22a48146.js",
+    "static/js/2.e1b7cdb6.chunk.js",
+    "static/css/main.8e0ecc44.chunk.css",
+    "static/js/main.86cb93f7.chunk.js"
+  ]
+}
