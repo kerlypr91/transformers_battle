@@ -15,9 +15,11 @@ export default function Battles () {
       return (
         <table className="battle-history__table" width="100%">
           <thead className="battle-history__table__thead">
-            <th></th>
-            <th>Winners</th>
-            <th>Winning Team</th>
+            <tr>
+              <th></th>
+              <th>Winners</th>
+              <th>Winning Team</th>
+            </tr>
           </thead>
           <tbody>
             {

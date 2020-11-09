@@ -28,6 +28,29 @@
   }
 }
 
+.audio-container {
+  position: absolute;
+  right: 20px;
+  height: 30px;
+
+  &__button {
+    border: none;
+    background: none;
+    color: $lighterGreen;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: 'Didact Gothic';
+    outline: none;
+    display: flex;
+    align-items: center;
+
+    &:active {
+      border: none;
+    }
+  }
+}
+
 @media (min-width: $minLandscapeRange) {
   .layout {
     margin: 70px;

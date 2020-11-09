@@ -13,12 +13,14 @@
     border-collapse: collapse;
 
     &__thead {
-      > th {
-        text-transform: uppercase;
-        font-size: 20px;
-        font-weight: bolder;
-        padding: 10px 0;
-        color: $lighterGreen;
+      > tr {
+        > th {
+          text-transform: uppercase;
+          font-size: 20px;
+          font-weight: bolder;
+          padding: 10px 0;
+          color: $lighterGreen;
+        }
       }
     }
 

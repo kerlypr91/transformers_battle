@@ -1,3 +1,6 @@
+import AutobotIcon from '../Images/autobotIcon.png'
+import DecepticonIcon from '../Images/decepticonIcon.png'
+
 export const TypesOfTransformers = {
   autobot: 'A',
   decepticon: 'D'
@@ -8,13 +11,13 @@ export const TransformerTypesList = [
     key: TypesOfTransformers.autobot,
     text: 'Autobot',
     value: TypesOfTransformers.autobot,
-    // image: { avatar: true, src: '/images/avatar/small/jenny.jpg' },
+    image: { avatar: true, src: AutobotIcon },
   },
   {
     key: TypesOfTransformers.decepticon,
     text: 'Decepticon',
     value: TypesOfTransformers.decepticon,
-    // image: { avatar: true, src: '/images/avatar/small/jenny.jpg' },
+    image: { avatar: true, src: DecepticonIcon },
   }
 ]
 

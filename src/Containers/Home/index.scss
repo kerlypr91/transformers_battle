@@ -82,6 +82,12 @@
             border-bottom: 2px solid $darkGreen !important;
             border-radius: 0 !important;
             padding-left: 0px !important;
+
+            img.ui.avatar.image {
+              width: 25px;
+              height: 25px;
+              filter: invert(1);
+            }
           }
         }
       }

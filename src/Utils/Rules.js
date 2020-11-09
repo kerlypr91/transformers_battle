@@ -158,7 +158,5 @@ export const FindBattleWinner = (transformers) => {
     }
   }
 
-  console.log('battleStats', battleStats)
-
   return battleStats
 }

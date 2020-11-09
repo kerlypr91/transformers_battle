@@ -94,6 +94,7 @@ export default function FormSection () {
             <Dropdown
               placeholder='Type of Transformer'
               fluid
+              inverted
               selection
               options={TransformerTypesList}
               value={type}
