@@ -40,11 +40,11 @@ const highestDecepticon = 'Predaking'.toUpperCase()
 export const FindBattleWinner = (transformers) => {
   const autobots = transformers
     .filter(item => item.type === TypesOfTransformers.autobot)
-    .sort((a, b) => (b[sortingKey] || 0) - (a[sortingKey] || 0))
+    .sort((a, b) => (b.specs[sortingKey] || 0) - (a.specs[sortingKey] || 0))
 
   const decepticons = transformers
     .filter(item => item.type === TypesOfTransformers.decepticon)
-    .sort((a, b) => (b[sortingKey] || 0) - (a[sortingKey] || 0))
+    .sort((a, b) => (b.specs[sortingKey] || 0) - (a.specs[sortingKey] || 0))
 
   const numberOfBattles = Math.min(autobots.length, decepticons.length)
 
@@ -157,6 +157,8 @@ export const FindBattleWinner = (transformers) => {
       survivors
     }
   }
+
+  console.log('battleStats', battleStats)
 
   return battleStats
 }

@@ -22,7 +22,7 @@ export default function FormSection () {
   /** Local State */
   const [name, setName] = useState('')
   const [type, setType] = useState(TypesOfTransformers.autobot)
-  const [specs, setSpecs] = useState(defaultSpecs)
+  const [specs, setSpecs] = useState({ ...defaultSpecs })
 
   const nameInput = useRef(null)
 
@@ -67,7 +67,7 @@ export default function FormSection () {
 
     setName('')
     setType(TypesOfTransformers.autobot)
-    setSpecs({ defaultSpecs })
+    setSpecs({ ...defaultSpecs })
     setTransformers(newValue)
   }
 
