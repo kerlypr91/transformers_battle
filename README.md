@@ -3,7 +3,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Deployed version
 
-You can visit the deployed site here: 
+You can visit the deployed site here: https://kerlypr91.github.io/transformers_battle/#/
 
 ## Available Scripts
 
